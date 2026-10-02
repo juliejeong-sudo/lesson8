@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 8 · What time do you get up?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <div class="title-block">
+        <span class="lesson-tag">Lesson 8</span>
+        <h1>What time do you get up?</h1>
+        <p class="subtitle">하루 일과를 영어로 말해 봐요</p>
+      </div>
+      <p class="voice-status" id="voiceStatus">🔈 영어 음성 준비 중…</p>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="learn" role="tab">📘 표현 익히기</button>
+      <button class="tab" data-tab="myday" role="tab">🕒 나의 하루</button>
+      <button class="tab" data-tab="quiz" role="tab">✅ Quiz</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1·2. 표현 익히기 -->
+    <section class="panel active" id="panel-learn">
+      <div class="panel-tools">
+        <label class="switch">
+          <input type="checkbox" id="hideMeaning" />
+          <span class="slider"></span>
+          <span class="switch-label">뜻 가리기 (카드를 누르면 보여요)</span>
+        </label>
+      </div>
+
+      <div class="group group-basic">
+        <div class="group-head">
+          <span class="badge badge-basic">기본 표현</span>
+          <h2>Key Expressions</h2>
+          <p>교과서에 나오는 꼭 알아야 할 6가지 표현</p>
+        </div>
+        <div class="card-grid" id="basicGrid"></div>
+      </div>
+
+      <div class="group group-extra">
+        <div class="group-head">
+          <span class="badge badge-extra">확장 표현</span>
+          <h2>More Expressions</h2>
+          <p>내 생활에서 쓸 수 있는 10가지 표현</p>
+        </div>
+        <div class="card-grid" id="extraGrid"></div>
+      </div>
+    </section>
+
+    <!-- 4. 나의 하루 말하기 -->
+    <section class="panel" id="panel-myday">
+      <div class="step">
+        <h2><span class="step-num">1</span> 일과를 골라요</h2>
+        <p class="step-label basic-label">기본 표현</p>
+        <div class="chip-row" id="chipBasic"></div>
+        <p class="step-label extra-label">확장 표현</p>
+        <div class="chip-row" id="chipExtra"></div>
+      </div>
+
+      <div class="step">
+        <h2><span class="step-num">2</span> 시간을 골라요</h2>
+        <div class="time-picker">
+          <div class="clock-display" id="clockDisplay">7:00</div>
+          <div>
+            <p class="step-label">몇 시?</p>
+            <div class="hour-grid" id="hourGrid"></div>
+            <p class="step-label">몇 분?</p>
+            <div class="minute-row" id="minuteRow"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step result-step">
+        <h2><span class="step-num">3</span> 말해 봐요</h2>
+        <div class="dialog">
+          <div class="bubble bubble-q">
+            <span class="who">Q</span>
+            <p class="sentence" id="questionText"></p>
+            <button class="speak-btn" id="speakQ" aria-label="질문 듣기">🔊</button>
+          </div>
+          <div class="bubble bubble-a">
+            <span class="who">A</span>
+            <p class="sentence" id="answerText"></p>
+            <button class="speak-btn" id="speakA" aria-label="대답 듣기">🔊</button>
+          </div>
+        </div>
+        <div class="dialog-actions">
+          <button class="btn btn-primary" id="speakBoth">▶ 질문과 대답 모두 듣기</button>
+          <button class="btn btn-ghost" id="randomDay">🎲 무작위로 바꾸기</button>
+        </div>
+        <p class="hint" id="koreanHint"></p>
+      </div>
+    </section>
+
+    <!-- 5. Quiz -->
+    <section class="panel" id="panel-quiz">
+      <div class="quiz-box" id="quizBox"></div>
+    </section>
+  </main>
+
+  <footer class="foot">Lesson 8 · What time do you get up? · Grade 5 English</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
